@@ -1,9 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <cstring>
-#include <stdexcept>
-#include <cctype>
+#include <bits/stdc++.h>
 
 using namespace std;
 
