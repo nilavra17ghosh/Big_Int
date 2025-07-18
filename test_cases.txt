@@ -1,0 +1,180 @@
+BigInt Library - Test Cases and Expected Output
+=====================================================
+
+This file contains the test cases executed by the main function in BigInt.cpp
+and their expected outputs.
+
+Test Case 1: Basic Initialization and Length Check
+--------------------------------------------------
+Input: BigInt first("12345")
+Expected Output: "The number of digits in first big integer = 5"
+
+Test Case 2: Equality Check
+---------------------------
+Input: BigInt first("12345"), BigInt second(12345)
+Comparison: first == second
+Expected Output: "first and second are equal!"
+
+Test Case 3: Less Than Comparison
+----------------------------------
+Input: BigInt third("10000"), BigInt fourth("100000")
+Comparison: third < fourth
+Expected Output: "third is smaller than fourth!"
+
+Test Case 4: Greater Than Comparison
+-------------------------------------
+Input: BigInt fifth("10000000"), BigInt fourth("100000")
+Comparison: fifth > fourth
+Expected Output: "fifth is larger than fourth!"
+
+Test Case 5: Number Display
+---------------------------
+Expected Output:
+first = 12345
+second = 12345
+third = 10000
+fourth = 100000
+fifth = 10000000
+
+Test Case 6: Post-Increment Operation
+-------------------------------------
+Input: first++ (where first = 12345)
+Expected Output: "After incrementing the value of first is : 12346"
+
+Test Case 7: Addition Operation
+-------------------------------
+Input: fourth + fifth (100000 + 10000000)
+Expected Output: "Sum of fourth and fifth = 10100000"
+
+Test Case 8: Multiplication Operation
+-------------------------------------
+Input: second * third (12345 * 10000)
+Expected Output: "Product of second and third = 123450000"
+
+Test Case 9: Fibonacci Sequence (0-100)
+---------------------------------------
+Expected Output Format:
+"-------------------------Fibonacci------------------------------"
+Fibonacci 0 = 0
+Fibonacci 1 = 1
+Fibonacci 2 = 1
+Fibonacci 3 = 2
+Fibonacci 4 = 3
+Fibonacci 5 = 5
+Fibonacci 6 = 8
+Fibonacci 7 = 13
+Fibonacci 8 = 21
+Fibonacci 9 = 34
+Fibonacci 10 = 55
+...
+[continuing up to Fibonacci 100]
+
+Some notable Fibonacci numbers:
+- Fibonacci 10 = 55
+- Fibonacci 20 = 6765
+- Fibonacci 30 = 832040
+- Fibonacci 40 = 102334155
+- Fibonacci 50 = 12586269025
+- Fibonacci 60 = 1548008755920
+- Fibonacci 70 = 190392490709135
+- Fibonacci 80 = 23416728348467685
+- Fibonacci 90 = 2880067194370816120
+- Fibonacci 100 = 354224848179261915075
+
+Test Case 10: Catalan Numbers (0-100)
+-------------------------------------
+Expected Output Format:
+"-------------------------Catalan------------------------------"
+Catalan 0 = 1
+Catalan 1 = 1
+Catalan 2 = 2
+Catalan 3 = 5
+Catalan 4 = 14
+Catalan 5 = 42
+Catalan 6 = 132
+Catalan 7 = 429
+Catalan 8 = 1430
+Catalan 9 = 4862
+Catalan 10 = 16796
+...
+[continuing up to Catalan 100]
+
+Some notable Catalan numbers:
+- Catalan 10 = 16796
+- Catalan 15 = 9694845
+- Catalan 20 = 6564120420
+- Catalan 25 = 4861946401452
+- Catalan 30 = 3814986502092304
+
+Test Case 11: Factorial Calculation (0-100)
+-------------------------------------------
+Expected Output Format:
+"-------------------------Factorial------------------------------"
+Factorial of 0 = 1
+Factorial of 1 = 1
+Factorial of 2 = 2
+Factorial of 3 = 6
+Factorial of 4 = 24
+Factorial of 5 = 120
+Factorial of 6 = 720
+Factorial of 7 = 5040
+Factorial of 8 = 40320
+Factorial of 9 = 362880
+Factorial of 10 = 3628800
+...
+[continuing up to Factorial 100]
+
+Some notable factorials:
+- Factorial 10 = 3628800
+- Factorial 20 = 2432902008176640000
+- Factorial 50 = 30414093201713378043612608166064768844377641568960512000000000000
+- Factorial 100 = 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+
+Additional Test Cases for Error Handling:
+==========================================
+
+Test Case 12: Division by Zero
+------------------------------
+Input: BigInt a(10) / BigInt(0)
+Expected Output: Exception "Arithmetic Error: Division By 0"
+
+Test Case 13: Invalid Number Format
+-----------------------------------
+Input: BigInt("12a34")
+Expected Output: Exception "ERROR"
+
+Test Case 14: Underflow in Decrement
+------------------------------------
+Input: BigInt(0)-- 
+Expected Output: Exception "UNDERFLOW"
+
+Test Case 15: Array Index Out of Bounds
+---------------------------------------
+Input: BigInt a("123"); a[5]
+Expected Output: Exception "ERROR"
+
+Performance Test Cases:
+======================
+
+Test Case 16: Large Number Arithmetic
+-------------------------------------
+Input: Very large numbers (e.g., 1000+ digits)
+Expected: Should handle without overflow or performance issues
+
+Test Case 17: Power Operations
+------------------------------
+Input: BigInt(2) ^ BigInt(1000)
+Expected: Correct calculation of 2^1000
+
+Test Case 18: Square Root
+-------------------------
+Input: sqrt(BigInt("123456789012345678901234567890"))
+Expected: Correct integer square root
+
+Notes:
+======
+- All test cases assume proper compilation with g++ compiler
+- The program demonstrates the library's capability to handle arbitrary precision integers
+- Error handling is implemented for common edge cases
+- Performance is optimized for large number operations
+- The library supports all standard arithmetic and comparison operations
